@@ -1,0 +1,32 @@
+<app-tag></app-tag>
+<app-search></app-search>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <ul class="">
+                <li *ngFor="let item of foodItems" >
+                    <a routerLink="/food/{{item.id}}">
+                        <img src="{{item.imageurl}}" alt="order your fooditems">
+                        <div class="content">
+                            <div class="name">
+                                {{item.name}}
+                            </div>
+                            <div >
+                               price: {{item.price}}
+                            </div>
+                            <span class="favourite {{item.favourite? '':'not'}}">♥</span>
+                               <div>
+                                delivery: {{item.cooktime}}
+                               </div>
+                            
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>

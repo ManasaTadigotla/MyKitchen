@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="row">
+        <div width="100%">
+            <input type="text" [(ngModel)]="foodItem" name="foodItem" placeholder="Search for your favourite food item">
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="card">
+                        <div class="card-header">
+                            Categories
+                        </div>
+                        <div class="card-body">                
+                    <ul >
+                        <li *ngFor="let category of categories">
+                           <input type="button" class="btn-info" (click)="onCategorySelect(category.id)" value="{{category.name}}">
+                        </li>
+                    </ul>
+                    </div>
+                    
+           </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            Food Items
+                        </div>
+                        <div class="card-body">
+                            <div *ngIf="isMenuVisible" >
+                          <div class="card" *ngFor="let item of fooditems" >
+                            <img >
+                            <div class="form-Control">
+                                {{item.description}}
+                            </div>
+                        
+                            <div class="form-Control">
+                               Price: {{item.price}}
+                            </div>
+                            
+                            <div class="form-Control">
+                                <input type="number" (keyup)="beforeChange(item.quantity)" (ngModelChange)="onQuantityChange(item.quantity)" placeholder="0" min="0" max="20">
+                            </div>
+                           
+                            <!--
+                            <div class="form-Control">
+                                <input type="button"  value="+" [(ngModel)]="item.quantity" (click)="plus(item.quantity)">
+                                <input width="10px" type="text" disabled="true" [(ngModel)]="item.quantity">
+                                <input type="button" value="-" (click)="minus(item.quantity)">
+                            </div>
+                        -->
+                            <!--
+                           <div class="btn-success"> <input type="button" value="Add" [(ngModel)]="item.quantity" (click)="onQuantityChange(item.quantity)">
+                           </div>
+                           -->
+                          </div>
+                        </div>
+                            </div>
+                        <div class="card-footer">
+                            <div style="text-align: left;">
+                                <label style="text-align:left" [(ngModel)]="itemsAdded"></label>
+                                <div class="btn btn-success" *ngIf="isItemSelected">
+                                    <input type="button" value="checkout" (click)="onCheckout()" >
+                                </div> 
+                            </div>
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-md-2">
+                   
+                </div>
+            </div>
+           
+        </div>
+                
+        <div class="lbl label-info">All rights are reserved @ MyKitchen</div>
+            
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="card-footer">
+        
+    </div>
+
+</div>

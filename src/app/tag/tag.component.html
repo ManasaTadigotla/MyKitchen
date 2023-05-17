@@ -1,0 +1,6 @@
+<div *ngif="tags" [style.justifyContent]="justifyContent">
+    <a *ngfor="let tag of tags" routerLink="/tag/{{tag.name}}">{{tag.name}}</a>
+</div>
+<div *ngif="foodpagetags" [style.justifyContent]="justifyContent">
+    <a *ngfor="let tagname of foodpagetags" routerLink="/tag/{{tagname}}">{{tagname}}</a>
+</div>

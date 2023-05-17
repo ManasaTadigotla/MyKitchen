@@ -1,0 +1,78 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+    border: 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+.container >{
+    min-width: 25rem;
+    max-width: 40rem;
+}
+img{
+    display: flex;
+    border-radius: 3rem;
+    object-fit: cover;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 1px solid #ffbbbb;
+    margin: .5rem;
+    padding: 0;    
+    justify-content: center;
+}
+
+ul li{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+border-bottom: 1px solid #e4e4e4;    
+
+}
+ul li:last-child{
+    border:none
+}
+ul li img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100rem;
+    object-fit: cover;
+}
+ul li div{
+    padding: 1rem;
+}
+ul li div:not(:first-child){
+    flex-basis: 18;
+}
+.checkout{
+   display: flex;
+   flex-direction: column; 
+   justify-content: space-between;
+   align-items:center;
+   flex: 1 3;
+   height: 20rem;
+   border:1px solid #ffbbbb;
+   border-radius:1rem;
+   padding:.5rem;
+   margin:.5rem;
+}
+
+.checkkout>div{
+display: flex;
+flex: 3;
+flex-direction: column;
+align-items: center;
+margin:1rem;
+}
+.checkout .foods-count{
+    margin-bottom: 1.5rem;
+}
+.checkout .foods-count::before{
+    content: 'Total products: ';
+    color: gray;
+}

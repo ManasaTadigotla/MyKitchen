@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row"  *ngIf="isPaymentSuccess">
+        <div class="col-md-9">
+            <ul>
+                <li *ngFor="let cartitem of cart.items">
+                    <div>
+                    <img [src]="cartitem.food.imageurl" alt="cartitem.food.name">
+                    <a routerLink="/food/{{cartitem.food.id}}">
+                      
+                    </a>
+                </div>
+                <div>  {{cartitem.food.name}}</div>
+                <div>
+                    <select #quantitySelect (change)="changeQuantity(cartitem, quantitySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div>{{cartitem.food.price | currency}}</div>
+                <div>
+                    <button class="btn btn-danger" (click)="removeFromCart(cartitem)">Remove</button>
+                </div>
+                </li>
+            </ul>
+        
+        </div>
+        <div class="col-md-3">
+            <div class="checkout">
+                <div class="foods-count">
+                    items:{{cart.items.length}}
+                </div>
+                
+                <div class="total-price">
+                    Total Price:575
+                </div>
+                <div class="checkout">
+                    <div>
+                        payment:
+                   
+                    <select>
+                        <option>Netbanking</option>
+                        <option>Creditcard</option>
+                        <option>Debitcard</option>
+                        <option>Upi(Gpay/Phonepay)</option>
+                    </select>
+                    <button (click)="paymethod()" >Confirm Payment</button>
+                </div>
+                </div>
+                <div>
+                  
+                </div>
+            </div>
+        
+        </div>
+    </div>
+  
+    </div>
+

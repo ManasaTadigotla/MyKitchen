@@ -1,0 +1,20 @@
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+div input{
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+}
+
+div button{
+color: gray;
+
+}
+div input button :hover{
+    
+}

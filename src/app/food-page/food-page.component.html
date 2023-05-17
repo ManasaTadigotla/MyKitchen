@@ -1,0 +1,30 @@
+<div class="container">
+    <img [src]="food.imageurl" alt="food.name">
+</div>
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{food.name}}
+        </span>
+        <span class="favourite {{food.favourite?'':'not'}}">♥</span>
+
+        
+    </div>
+    <div class="origins">
+        <span *ngFor="let origin of food.origins">{{origin}}</span>
+    </div>
+    <div class="tag">
+        <app-tag [foodpagetags]="food.tags"></app-tag>
+    </div>
+    <div>
+        <span>
+            Time to cook about <strong>{{food.cooktime}}</strong>
+        </span>
+    </div>
+    <div class="price">
+    <span>{{food.price |currency }}</span>
+</div>
+<div class="btn btn-success">
+    <button (click)="addToCart()" >Add To Cart</button>
+</div>
+</div>

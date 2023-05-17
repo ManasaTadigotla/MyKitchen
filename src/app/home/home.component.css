@@ -1,0 +1,39 @@
+ul li{
+    align-items: center;
+    height: 25 rem;
+    width: 20 rem;
+    flex-wrap: wrap;
+    display: flex;
+    list-style-type: none;
+    border-radius:1 rem ;
+    margin: 0.5 rem;
+    border:1px solid whitesmoke;
+
+
+}
+
+ul li a{
+    align-items: center;
+    height: 25 rem;
+    width: 20 rem;
+    flex-wrap: wrap;
+    display: flex;
+    list-style-type: none;
+    border-radius:1 rem ;
+    margin: 1rem;
+    border: 2px solid whitesmoke;
+    flex-direction: column;
+
+}
+
+ul{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10;
+}
+
+li a:hover{
+opacity: 0.8;
+}
